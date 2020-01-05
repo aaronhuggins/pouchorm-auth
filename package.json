@@ -1,0 +1,25 @@
+{
+  "name": "pouchorm-auth",
+  "version": "1.0.0",
+  "description": "Authentication methods for PouchORM collections, using the Pouch Server Auth module.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronhuggins/pouchorm-auth.git"
+  },
+  "keywords": [
+    "pouchdb",
+    "orm",
+    "typescript",
+    "authentication"
+  ],
+  "author": "Aaron Huggins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronhuggins/pouchorm-auth/issues"
+  },
+  "homepage": "https://github.com/aaronhuggins/pouchorm-auth#readme"
+}
