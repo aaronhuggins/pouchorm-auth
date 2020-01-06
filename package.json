@@ -39,7 +39,7 @@
     "typescript": "^3.7.4"
   },
   "peerDependencies": {
-    "pouchorm": "^1.1.0"
+    "pouchorm": "^1.2.0"
   },
   "dependencies": {
     "pouchdb-auth": "^4.2.0"
