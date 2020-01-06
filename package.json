@@ -1,10 +1,15 @@
 {
   "name": "pouchorm-auth",
   "version": "1.0.0",
-  "description": "Authentication methods for PouchORM collections, using the Pouch Server Auth module.",
+  "description": "Authentication methods for PouchORM collections, using the PouchDB Server Auth module.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
+    "build": "tsc",
+    "prepublish": "tsc && npm run lint && npm test",
+    "dev": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -12,6 +17,7 @@
   },
   "keywords": [
     "pouchdb",
+    "pouchorm",
     "orm",
     "typescript",
     "authentication"
@@ -21,5 +27,21 @@
   "bugs": {
     "url": "https://github.com/aaronhuggins/pouchorm-auth/issues"
   },
-  "homepage": "https://github.com/aaronhuggins/pouchorm-auth#readme"
+  "homepage": "https://github.com/aaronhuggins/pouchorm-auth#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.12.24",
+    "@types/pouchdb": "^6.4.0",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "pouchorm": "^1.1.0"
+  },
+  "dependencies": {
+    "pouchdb-auth": "^4.2.0"
+  }
 }
