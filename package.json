@@ -9,7 +9,8 @@
     "build": "tsc",
     "prepublish": "tsc && npm run lint && npm test",
     "dev": "tsc -w",
-    "lint": "tslint -c tslint.json -p tsconfig.json"
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint:fix": "tslint -c tslint.json -p tsconfig.json --fix"
   },
   "repository": {
     "type": "git",
