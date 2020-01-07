@@ -129,14 +129,14 @@ class PouchAuthMethods extends PouchCollection<PouchUser> {
     };
 }
 
-class PouchAuthCollection<T> extends PouchCollection<PouchUser> {
+export class PouchAuthCollection<T> extends PouchCollection<PouchUser> {
     _authState: CollectionState;
     userId: (username: string) => string;
     checkAuthInit: () => Promise<void>;
     useAsAuthCollection: () => Promise<void>;
     stopUsingAsAuthCollection: () => void;
     signUp: (username: string, password: string, options?: PouchAuth.SignUpOptions) => Promise<T>;
-    logIn: (username: string, password: string) => Promise<T> | Promise<void>;
+    logIn: (username: string, password: string) => Promise<T>;
     logOut: () => Promise<PouchAuth.LoginResponse>;
     session: () => Promise<PouchAuth.SessionResponse>;
 }
